@@ -29,7 +29,9 @@ nav a:not(.booking-link):hover{border-color:var(--paper)}
 .booking-link{border:1px solid #e9e3d68c;padding:13px 22px;display:flex;gap:34px;align-items:center;background:#1717163b}
 .booking-link:hover{background:var(--paper);color:var(--ink)}
 .work-passage{background:linear-gradient(90deg,#bdad97 0%,#d8cec0 27%,#dfd9d1 66%,#b7b2a5 100%);color:var(--ink)}
-.work{position:relative;padding:100px var(--gutter) 90px;background:transparent;color:var(--ink)}
+.work{position:relative;isolation:isolate;clip-path:inset(0);padding:100px var(--gutter) 90px;background:transparent;color:var(--ink)}
+/* Viewport-fixed, but painted only inside this section; content scrolls above it. */
+.work-logo{position:fixed;left:50%;top:50%;width:min(70vw,64vh,560px);max-width:none;height:auto;transform:translate(-50%,-50%);filter:invert(1);opacity:.14;z-index:-1;pointer-events:none;user-select:none}
 .work a:focus-visible,.work button:focus-visible{outline-color:var(--ink)}
 .work-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:60px;margin-bottom:66px}
 .work-intro h2{font-size:clamp(64px,7.7vw,150px);line-height:.95;max-width:65%}
