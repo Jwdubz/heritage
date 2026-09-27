@@ -3,7 +3,7 @@
 @font-face{font-family:'Barlow Condensed';src:url('assets/barlow-condensed-700.ttf') format('truetype');font-weight:700;font-display:swap}
 :root{--ink:#171716;--paper:#e9e3d6;--red:#9e3024;--gutter:clamp(24px,3.4vw,72px);color-scheme:dark}
 *{box-sizing:border-box}
-html{scroll-behavior:auto;scroll-padding-top:105px}
+html{scroll-behavior:auto;scroll-padding-top:105px;scroll-padding-bottom:110px}
 body{margin:0;background:var(--ink);color:var(--paper);font:400 18px/1.5 Barlow,Arial,sans-serif;-webkit-font-smoothing:antialiased}
 body:has(dialog[open]){overflow:hidden}
 button,a{-webkit-tap-highlight-color:transparent}
@@ -59,7 +59,7 @@ nav a:not(.booking-link):hover{border-color:var(--paper)}
 .visit-details{display:flex;gap:80px;margin-top:70px;font-size:17px;line-height:1.5}
 address{font-style:normal}
 .visit-details a{text-decoration:underline;text-underline-offset:5px}
-footer{padding:30px var(--gutter);display:flex;justify-content:space-between;align-items:center;gap:26px;font-size:16px}
+footer{padding:30px var(--gutter) calc(110px + env(safe-area-inset-bottom,0px));display:flex;justify-content:space-between;align-items:center;gap:26px;font-size:16px}
 footer span{font-size:14px;color:#bcb7ad}
 footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underline;text-underline-offset:5px}
 .art-dialog{position:fixed;inset:0;width:100vw;max-width:none;height:100svh;max-height:none;margin:0;padding:65px 30px 25px;border:0;background:#151514;color:var(--paper)}
@@ -77,7 +77,7 @@ footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underlin
   .artist-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 16px}.artist h3{font-size:18px;margin-bottom:12px;min-height:2.5em}.artist-work{margin-top:6px}.artist-portfolio{font-size:16px;padding:10px 0;gap:4px}.artist-portfolio>.icon-arrow{width:20px;height:20px}
   .work-outro{margin-top:40px;align-items:start;flex-direction:column;gap:18px;font-size:17px}.work-outro p{max-width:230px}
   .visit{min-height:860px;height:110svh;padding:65px 23px}.visit-photo{object-position:29% 50%}.visit:after{background:linear-gradient(#10101040,#101010a8 28%,#101010e0)}.visit h2{font-size:clamp(61px,16vw,108px)}.visit-copy>p{font-size:18px;margin-top:25px}.primary-action{font-size:18px;margin-top:28px;width:100%;padding:16px 21px}.visit-details{display:block;margin-top:40px;font-size:16px}.visit-details p{margin-top:20px}
-  footer{padding:28px 23px;align-items:flex-start;flex-wrap:wrap;font-size:16px;gap:18px}footer span{flex-basis:100%;font-size:14px}
+  footer{padding:28px 23px calc(110px + env(safe-area-inset-bottom,0px));align-items:flex-start;flex-wrap:wrap;font-size:16px;gap:18px}footer span{flex-basis:100%;font-size:14px}
   .art-dialog{padding:70px 16px 25px}.art-dialog>p{font-size:16px}.dialog-close{right:14px}
 }
 
@@ -107,7 +107,30 @@ footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underlin
   .film-title{left:24px;right:24px;bottom:96px;max-width:none}
   .film-title h1{font-size:40px;line-height:.95}
   .film-title p{font-size:16px;line-height:1.4;margin-top:12px}
-  .film-actions{left:24px;right:24px;bottom:22px;gap:15px}
+  .film-actions{left:24px;right:24px;top:108px;bottom:auto;gap:15px}
   .film-actions>a{font-size:16px;gap:15px}
   .film-toggle{font-size:16px;padding:10px 12px;gap:9px}
+}
+
+/* The award leads into the artists without covering the opening film. */
+.award{background:var(--ink);color:var(--paper);padding:32px var(--gutter)}
+.award-link{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:30px;max-width:1440px;margin:auto}
+.award-year{font:700 64px/1 'Barlow Condensed','Arial Narrow',sans-serif;color:#bcb7ad}
+.award-copy{display:flex;flex-direction:column;gap:6px}
+.award-copy strong{font:700 clamp(30px,3vw,44px)/1.05 'Barlow Condensed','Arial Narrow',sans-serif}
+.award-copy>span{font-size:16px}
+.award-source{display:inline-flex;align-items:center;gap:16px;font-size:16px;padding:10px 0;border-bottom:1px solid #e9e3d675}
+.award-link:hover .award-source{border-color:var(--paper)}
+.floating-booking{position:fixed;z-index:40;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px;max-width:calc(100vw - 40px);padding:14px 28px;border:1px solid #17171645;border-radius:999px;background:var(--paper);color:var(--ink);font-size:18px;font-weight:600;white-space:nowrap;box-shadow:0 4px 20px #0003;transition:background .2s,color .2s}
+.floating-booking:hover{background:var(--ink);color:var(--paper);border-color:var(--paper)}
+.floating-booking:focus-visible{outline-color:var(--red);outline-offset:4px}
+body:has(dialog[open]) .floating-booking{visibility:hidden;pointer-events:none}
+@media(max-width:700px){
+  .award{padding:28px 23px}
+  .award-link{grid-template-columns:auto 1fr;gap:14px 20px}
+  .award-year{font-size:52px}
+  .award-copy strong{font-size:30px}
+  .award-source{grid-column:1/-1;justify-self:start}
+  .film-title{bottom:calc(80px + env(safe-area-inset-bottom,0px))}
+  .floating-booking{bottom:calc(12px + env(safe-area-inset-bottom,0px));font-size:17px;gap:22px;min-height:54px;padding:13px 25px}
 }
