@@ -10,6 +10,7 @@ button,a{-webkit-tap-highlight-color:transparent}
 button,input{font:inherit}
 button{color:inherit}
 a{color:inherit;text-decoration:none}
+.icon-arrow{display:inline-block;width:20px;height:20px;flex-shrink:0;vertical-align:-.15em;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
 button{cursor:pointer}
 a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:6px}
 button{border:0}
@@ -41,12 +42,12 @@ nav a:not(.booking-link):hover{border-color:var(--paper)}
 .artist-detail{display:block;width:100%;padding:0;background:none}
 .artist-detail>img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 50%;background:#d8d2c5}
 .artist-portfolio{display:flex;justify-content:space-between;align-items:center;font-size:16px;font-weight:600;padding:13px 0;border-bottom:1px solid #17171640;min-height:48px}
-.artist-portfolio>span{font-size:23px;transition:transform .2s}
-.artist-portfolio:hover>span{transform:translate(3px,-3px)}
+.artist-portfolio>.icon-arrow{width:21px;height:21px;transition:transform .2s}
+.artist-portfolio:hover>.icon-arrow{transform:translate(3px,-3px)}
 .artist-portfolio:hover{border-color:var(--ink)}
 .work-outro{margin-top:70px;display:flex;justify-content:space-between;gap:30px;align-items:center;font-size:18px}
 .work-outro a{border-bottom:1px solid var(--ink);padding:8px 0}
-.work-outro a span{margin-left:35px}
+.work-outro a .icon-arrow{margin-left:35px}
 .visit{min-height:930px;height:110svh;position:relative;display:flex;align-items:flex-end;padding:90px var(--gutter);overflow:hidden;isolation:isolate}
 .visit-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;z-index:-2}
 .visit:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#101010e5, #10101060 60%,#10101035)}
@@ -54,13 +55,13 @@ nav a:not(.booking-link):hover{border-color:var(--paper)}
 .visit-copy>p{margin-top:30px;font-size:20px;line-height:1.5}
 .primary-action{background:var(--paper);color:var(--ink);display:inline-flex;align-items:center;justify-content:space-between;gap:76px;padding:18px 26px;margin-top:34px;font-size:20px;font-weight:600;transition:background .2s,color .2s}
 .primary-action:hover{background:#b34233;color:#fff}
-.primary-action span{font-size:29px}
+.primary-action .icon-arrow{width:26px;height:26px}
 .visit-details{display:flex;gap:80px;margin-top:70px;font-size:17px;line-height:1.5}
 address{font-style:normal}
 .visit-details a{text-decoration:underline;text-underline-offset:5px}
 footer{padding:30px var(--gutter);display:flex;justify-content:space-between;align-items:center;gap:26px;font-size:16px}
 footer span{font-size:14px;color:#bcb7ad}
-footer a{text-decoration:underline;text-underline-offset:5px}
+footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underline;text-underline-offset:5px}
 .art-dialog{position:fixed;inset:0;width:100vw;max-width:none;height:100svh;max-height:none;margin:0;padding:65px 30px 25px;border:0;background:#151514;color:var(--paper)}
 .art-dialog[open]{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
 .art-dialog::backdrop{background:#151514}
@@ -73,9 +74,9 @@ footer a{text-decoration:underline;text-underline-offset:5px}
   html{scroll-padding-top:20px}
   .site-header{padding:20px;gap:15px}.brand{width:64px}nav{gap:18px;font-size:16px}nav>a:first-child,nav>a:nth-child(2){display:none}.booking-link{padding:11px 16px;gap:25px}
   .work{padding:70px 23px 55px}.work-intro{display:block;margin-bottom:44px}.work-intro h2{max-width:100%;font-size:clamp(49px,12.9vw,82px);line-height:.98}.work-intro>div{max-width:100%;font-size:18px;margin-top:25px}.work-intro p+p{margin-top:12px}
-  .artist-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 16px}.artist h3{font-size:18px;margin-bottom:12px;min-height:2.5em}.artist-work{margin-top:6px}.artist-portfolio{font-size:16px;padding:10px 0;gap:4px}.artist-portfolio>span{font-size:21px}
+  .artist-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 16px}.artist h3{font-size:18px;margin-bottom:12px;min-height:2.5em}.artist-work{margin-top:6px}.artist-portfolio{font-size:16px;padding:10px 0;gap:4px}.artist-portfolio>.icon-arrow{width:20px;height:20px}
   .work-outro{margin-top:40px;align-items:start;flex-direction:column;gap:18px;font-size:17px}.work-outro p{max-width:230px}
-  .visit{min-height:860px;height:110svh;padding:65px 23px}.visit-photo{object-position:29% 50%}.visit:after{background:linear-gradient(#10101040,#101010a8 28%,#101010e0)}.visit h2{font-size:clamp(61px,16vw,108px)}.visit-copy>p{font-size:18px;margin-top:25px}.visit-copy>p br{display:none}.primary-action{font-size:18px;margin-top:28px;width:100%;padding:16px 21px}.visit-details{display:block;margin-top:40px;font-size:16px}.visit-details p{margin-top:20px}
+  .visit{min-height:860px;height:110svh;padding:65px 23px}.visit-photo{object-position:29% 50%}.visit:after{background:linear-gradient(#10101040,#101010a8 28%,#101010e0)}.visit h2{font-size:clamp(61px,16vw,108px)}.visit-copy>p{font-size:18px;margin-top:25px}.primary-action{font-size:18px;margin-top:28px;width:100%;padding:16px 21px}.visit-details{display:block;margin-top:40px;font-size:16px}.visit-details p{margin-top:20px}
   footer{padding:28px 23px;align-items:flex-start;flex-wrap:wrap;font-size:16px;gap:18px}footer span{flex-basis:100%;font-size:14px}
   .art-dialog{padding:70px 16px 25px}.art-dialog>p{font-size:16px}.dialog-close{right:14px}
 }
@@ -96,7 +97,7 @@ footer a{text-decoration:underline;text-underline-offset:5px}
 .film-title p{font-size:18px;line-height:1.5;margin-top:22px}
 .film-actions{position:absolute;left:var(--gutter);right:var(--gutter);bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .film-actions>a{display:flex;align-items:center;gap:38px;min-height:48px;border-bottom:1px solid #17171675;font-size:18px;font-weight:600}
-.film-actions>a span{font-size:25px}
+.film-actions>a .icon-arrow{width:22px;height:22px}
 .film-toggle{display:flex;align-items:center;gap:12px;font-size:16px;min-height:48px;padding:11px 16px;background:#e9e3d6cf;border:1px solid #17171665;color:var(--ink)}
 .film-toggle[hidden]{display:none}
 .film-state-icon{font-size:20px}
