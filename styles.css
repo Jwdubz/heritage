@@ -28,7 +28,8 @@ nav a:not(.booking-link){padding:12px 0;border-bottom:1px solid transparent;tran
 nav a:not(.booking-link):hover{border-color:var(--paper)}
 .booking-link{border:1px solid #e9e3d68c;padding:13px 22px;display:flex;gap:34px;align-items:center;background:#1717163b}
 .booking-link:hover{background:var(--paper);color:var(--ink)}
-.work{position:relative;padding:100px var(--gutter) 90px;background:var(--paper);color:var(--ink)}
+.work-passage{background:linear-gradient(90deg,#bdad97 0%,#d8cec0 27%,#dfd9d1 66%,#b7b2a5 100%);color:var(--ink)}
+.work{position:relative;padding:100px var(--gutter) 90px;background:transparent;color:var(--ink)}
 .work a:focus-visible,.work button:focus-visible{outline-color:var(--ink)}
 .work-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:60px;margin-bottom:66px}
 .work-intro h2{font-size:clamp(64px,7.7vw,150px);line-height:.95;max-width:65%}
@@ -113,14 +114,15 @@ footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underlin
 }
 
 /* The award leads into the artists without covering the opening film. */
-.award{background:var(--ink);color:var(--paper);padding:32px var(--gutter)}
+.award{background:transparent;color:var(--ink);padding:32px var(--gutter)}
+.award a:focus-visible{outline-color:var(--ink)}
 .award-link{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:30px;max-width:1440px;margin:auto}
-.award-year{font:700 64px/1 'Barlow Condensed','Arial Narrow',sans-serif;color:#bcb7ad}
+.award-year{font:700 64px/1 'Barlow Condensed','Arial Narrow',sans-serif;color:#665b4e}
 .award-copy{display:flex;flex-direction:column;gap:6px}
 .award-copy strong{font:700 clamp(30px,3vw,44px)/1.05 'Barlow Condensed','Arial Narrow',sans-serif}
 .award-copy>span{font-size:16px}
-.award-source{display:inline-flex;align-items:center;gap:16px;font-size:16px;padding:10px 0;border-bottom:1px solid #e9e3d675}
-.award-link:hover .award-source{border-color:var(--paper)}
+.award-source{display:inline-flex;align-items:center;gap:16px;font-size:16px;padding:10px 0;border-bottom:1px solid #17171675}
+.award-link:hover .award-source{border-color:var(--ink)}
 .floating-booking{position:fixed;z-index:40;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px;max-width:calc(100vw - 40px);padding:14px 28px;border:1px solid #17171645;border-radius:999px;background:var(--paper);color:var(--ink);font-size:18px;font-weight:600;white-space:nowrap;box-shadow:0 4px 20px #0003;transition:background .2s,color .2s}
 .floating-booking:hover{background:var(--ink);color:var(--paper);border-color:var(--paper)}
 .floating-booking:focus-visible{outline-color:var(--red);outline-offset:4px}
