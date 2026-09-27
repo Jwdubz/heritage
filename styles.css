@@ -3,7 +3,7 @@
 @font-face{font-family:Barlow;src:url('assets/barlow-700.ttf') format('truetype');font-weight:700;font-display:swap}
 @font-face{font-family:'Barlow Condensed';src:url('assets/barlow-condensed-700.ttf') format('truetype');font-weight:700;font-display:swap}
 @font-face{font-family:'IM Fell English SC';src:url('assets/im-fell-english-sc-400.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
-:root{--ink:#171716;--paper:#e9e3d6;--red:#9e3024;--gutter:clamp(24px,3.4vw,72px);color-scheme:dark}
+:root{--ink:#171716;--paper:#e9e3d6;--red:#9e3024;--gutter:clamp(24px,3.4vw,72px);--headline-size:clamp(30.22px,3.022vw,59.18px);color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:auto;scroll-padding-top:105px;scroll-padding-bottom:110px}
 body{margin:0;background:var(--ink);color:var(--paper);font:400 18px/1.5 'IM Fell English SC',Georgia,serif;-webkit-font-smoothing:antialiased}
@@ -37,7 +37,7 @@ nav a:not(.booking-link):hover{border-color:var(--paper)}
 .work-logo{position:fixed;left:50%;top:50%;width:min(70vw,64vh,560px);max-width:none;height:auto;transform:translate(-50%,-50%);filter:invert(1);opacity:.14;z-index:-1;pointer-events:none;user-select:none}
 .work a:focus-visible,.work button:focus-visible{outline-color:var(--ink)}
 .work-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:60px;margin-bottom:66px}
-.work-intro h2{font-size:clamp(40.3px,4.849vw,94.46px);line-height:1.05;max-width:65%}
+.work-intro h2{font-size:var(--headline-size);line-height:1.05;max-width:65%}
 .work-intro>div{max-width:310px;font-size:19px;font-weight:700;line-height:1.6;padding-bottom:7px}
 .work-intro p+p{margin-top:20px}
 .artist-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:clamp(18px,1.8vw,34px);row-gap:70px}
@@ -57,7 +57,7 @@ nav a:not(.booking-link):hover{border-color:var(--paper)}
 .visit{min-height:930px;height:110svh;position:relative;display:flex;align-items:flex-end;padding:90px var(--gutter);overflow:hidden;isolation:isolate}
 .visit-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;z-index:-2}
 .visit:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#101010e5, #10101060 60%,#10101035)}
-.visit h2{font-size:clamp(49.39px,5.556vw,111.13px);line-height:1.05}
+.visit h2{font-size:var(--headline-size);line-height:1.05}
 .visit-copy>p{margin-top:30px;font-size:20px;line-height:1.5}
 .primary-action{background:var(--paper);color:var(--ink);display:inline-flex;align-items:center;justify-content:space-between;gap:76px;padding:18px 26px;margin-top:34px;font-size:20px;font-weight:600;transition:background .2s,color .2s}
 .primary-action:hover{background:#b34233;color:#fff}
@@ -79,10 +79,10 @@ footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underlin
 @media(max-width:700px){
   html{scroll-padding-top:20px}
   .site-header{padding:20px;gap:15px}.brand{width:64px}nav{gap:18px;font-size:16px}nav>a:first-child,nav>a:nth-child(2){display:none}.booking-link{padding:11px 16px;gap:25px}
-  .work{padding:70px 23px 55px}.work-intro{display:block;margin-bottom:44px}.work-intro h2{max-width:100%;font-size:clamp(30.86px,8.123vw,51.64px);line-height:1.05}.work-intro>div{max-width:100%;font-size:18px;margin-top:25px}.work-intro p+p{margin-top:12px}
+  .work{padding:70px 23px 55px}.work-intro{display:block;margin-bottom:44px}.work-intro h2{max-width:100%;line-height:1.05}.work-intro>div{max-width:100%;font-size:18px;margin-top:25px}.work-intro p+p{margin-top:12px}
   .artist-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px 16px}.artist h3{font-size:18px;margin-bottom:12px;min-height:2.5em}.artist-work{margin-top:6px}.artist-portfolio{font-size:16px;padding:10px 0;gap:4px}.artist-portfolio>.icon-arrow{width:20px;height:20px}
   .work-outro{margin-top:40px;align-items:start;flex-direction:column;gap:18px;font-size:17px}.work-outro p{max-width:230px}
-  .visit{min-height:860px;height:110svh;padding:65px 23px}.visit-photo{object-position:29% 50%}.visit:after{background:linear-gradient(#10101040,#101010a8 28%,#101010e0)}.visit h2{font-size:clamp(28px,9.5vw,66.68px)}.visit-copy>p{font-size:18px;margin-top:25px}.primary-action{font-size:18px;margin-top:28px;width:100%;padding:16px 21px}.visit-details{display:block;margin-top:40px;font-size:16px}.visit-details p{margin-top:20px}
+  .visit{min-height:860px;height:110svh;padding:65px 23px}.visit-photo{object-position:29% 50%}.visit:after{background:linear-gradient(#10101040,#101010a8 28%,#101010e0)}.visit-copy>p{font-size:18px;margin-top:25px}.primary-action{font-size:18px;margin-top:28px;width:100%;padding:16px 21px}.visit-details{display:block;margin-top:40px;font-size:16px}.visit-details p{margin-top:20px}
   footer{padding:28px 23px calc(110px + env(safe-area-inset-bottom,0px));align-items:flex-start;flex-wrap:wrap;font-size:16px;gap:18px}footer span{flex-basis:100%;font-size:14px}
   .art-dialog{padding:70px 16px 25px}.art-dialog>p{font-size:16px}.dialog-close{right:14px}
 }
@@ -99,7 +99,7 @@ footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underlin
 .film-top-shade{position:absolute;inset:0 0 auto;height:150px;background:linear-gradient(#e9e3d6cc,transparent);z-index:-1;pointer-events:none}
 .film-title{position:absolute;left:var(--gutter);bottom:118px;max-width:45%;opacity:0;transition:opacity .35s linear}
 .film-resolved .film-title{opacity:1}
-.film-title h1{font-size:clamp(30.22px,3.022vw,59.18px);line-height:1.05}
+.film-title h1{font-size:var(--headline-size);line-height:1.05}
 .film-title p{font-size:18px;line-height:1.5;margin-top:22px}
 .film-actions{position:absolute;left:var(--gutter);right:var(--gutter);bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .film-actions>a{display:flex;align-items:center;gap:38px;min-height:48px;border-bottom:1px solid #17171675;font-size:18px;font-weight:600}
@@ -109,9 +109,10 @@ footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underlin
 .film-state-icon{font-size:20px}
 .opening-film :focus-visible,.site-header :focus-visible{outline-color:var(--ink)}
 @media(max-width:850px){
+  :root{--headline-size:25.18px}
   .film-stage{min-height:660px}
   .film-title{left:24px;right:24px;bottom:96px;max-width:none}
-  .film-title h1{font-size:25.18px;line-height:1.05}
+  .film-title h1{line-height:1.05}
   .film-title p{font-size:16px;line-height:1.4;margin-top:12px}
   .film-actions{left:24px;right:24px;top:108px;bottom:auto;gap:15px}
   .film-actions>a{font-size:16px;gap:15px}
