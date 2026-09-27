@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+<defs>
+  <linearGradient id="leaf" x1="0" y1="0" x2="1" y2=".95">
+    <stop stop-color="#f5dda0"/><stop offset=".2" stop-color="#c49b52"/><stop offset=".47" stop-color="#70502b"/><stop offset=".57" stop-color="#c6a262"/><stop offset=".74" stop-color="#8a612e"/><stop offset="1" stop-color="#342414"/>
+  </linearGradient>
+  <linearGradient id="ridge" x1="0" y1="0" x2="0.75" y2="1"><stop stop-color="#f5dfac"/><stop offset=".4" stop-color="#ad864b"/><stop offset="1" stop-color="#5a3a1a"/></linearGradient>
+  <filter id="relief" x="-20%" y="-20%" width="150%" height="150%"><feDropShadow dx="1.1" dy="1.4" stdDeviation=".65" flood-color="#140f08" flood-opacity=".9"/></filter>
+</defs>
+<g transform="translate(100 100) scale(-1 -1)"><g filter="url(#relief)" stroke="#573b1e" stroke-width=".85" stroke-linejoin="round">
+  <path fill="url(#leaf)" d="M19 20C28 7 53 7 94 13C85 16 83 19 84 23C70 20 64 20 57 24C68 26 73 29 78 34C62 34 54 29 48 25C49 33 42 36 35 32C31 30 30 25 32 21C28 22 25 26 24 32C20 39 12 43 8 39C14 33 10 23 19 20Z"/>
+  <path fill="url(#leaf)" d="M20 19C7 28 7 53 13 94C16 85 19 83 23 84C20 70 20 64 24 57C26 68 29 73 34 78C34 62 29 54 25 48C33 49 36 42 32 35C30 31 25 30 21 32C22 28 26 25 32 24C39 20 43 12 39 8C33 14 23 10 20 19Z"/>
+  <path fill="url(#ridge)" d="M10 9C16 10 17 6 20 3C22 10 26 13 34 14C31 19 25 23 20 22C23 27 27 31 29 38C17 35 12 28 14 20C10 22 6 21 3 20C6 17 10 16 10 9Z"/>
+  <path fill="url(#leaf)" d="M28 28C44 29 50 41 45 50C41 56 32 56 29 50C26 44 30 39 35 39C39 39 41 42 40 45C39 48 36 48 34 46C35 49 39 51 42 47C46 40 38 32 29 34Z"/>
+  <path fill="url(#ridge)" d="M27 28C34 21 38 21 44 23C41 26 40 30 40 34C34 34 29 31 27 28Z"/>
+  <path fill="url(#leaf)" d="M32 17C43 13 56 14 65 17C57 18 53 21 50 26C43 24 37 22 32 17Z"/>
+  <path fill="url(#leaf)" d="M17 32C13 43 14 56 17 65C18 57 21 53 26 50C24 43 22 37 17 32Z"/>
+  <path fill="url(#ridge)" d="M50 15C53 8 57 6 63 5C60 9 61 13 64 16Z"/>
+  <path fill="url(#ridge)" d="M15 50C8 53 6 57 5 63C9 60 13 61 16 64Z"/>
+  <path fill="url(#ridge)" d="M73 13C79 9 84 9 91 11L84 18Z"/>
+  <path fill="url(#ridge)" d="M13 73C9 79 9 84 11 91L18 84Z"/>
+  <path fill="none" stroke="#efcf8d" stroke-width="1.2" d="M19 17C31 10 61 11 87 14M17 19C10 31 11 61 14 87M22 23C23 13 33 13 37 12M23 22C13 23 13 33 12 37M32 30C44 34 47 43 41 49"/>
+  <path fill="none" stroke="#e0ba70" stroke-width=".85" d="M34 18L49 22M44 16L54 20M19 34L22 49M16 44L20 54M59 25L70 30M25 59L30 70"/>
+  <path fill="none" stroke="#65431e" stroke-width="1.1" d="M28 15L29 21M17 28L22 30M56 14L57 19M14 56L19 57"/>
+  <g fill="#e2bf7c" stroke="#72512e"><circle cx="21" cy="20" r="4.5"/><circle cx="20" cy="20" r="2.1"/><circle cx="43" cy="11.5" r="1.6"/><circle cx="11.5" cy="43" r="1.6"/></g>
+</g></g>
+</svg>

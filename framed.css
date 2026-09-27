@@ -1,0 +1,161 @@
+/* Separate, reversible framed-gallery art direction. The approved base remains unchanged.
+   Ornament is original decorative vector work; no source photograph is recolored or edited. */
+.framed-draft .picture-frame{
+  --frame-width:clamp(14px,1.15vw,23px);
+  --corner-size:clamp(48px,4.7vw,76px);
+  --frame-body:#967043;
+  --frame-light:#e5c688;
+  --frame-dark:#372818;
+  position:relative;
+  display:block;
+  padding:var(--frame-width);
+  border:2px solid;
+  border-color:#e0c393 #49321c #342319 #c39b61;
+  border-radius:1px;
+  background:
+    linear-gradient(135deg,#f1dbaa60 0%,transparent 32%,#24170ddd 100%),
+    repeating-linear-gradient(90deg,transparent 0 2px,#130a071c 2px 3px,transparent 3px 5px),
+    var(--frame-body);
+  box-shadow:
+    0 1px 0 #fff8,
+    0 3px 4px #22180c75,
+    1px 9px 13px #36271740,
+    3px 19px 24px -12px #291b15a6,
+    inset 1px 1px 1px #f7e8ba,
+    inset -2px -2px 2px #22160e;
+  isolation:isolate;
+}
+.framed-draft .picture-frame::before,
+.framed-draft .picture-frame::after{
+  content:"";
+  position:absolute;
+  pointer-events:none;
+}
+.framed-draft .picture-frame::before{
+  inset:5px;
+  z-index:1;
+  border:1px solid;
+  border-color:var(--frame-dark) var(--frame-light) var(--frame-light) var(--frame-dark);
+  background:
+    url('assets/frames/egg-dart-horizontal.svg') left top / 44px 7px repeat-x,
+    url('assets/frames/egg-dart-horizontal.svg') left bottom / 44px 7px repeat-x,
+    url('assets/frames/egg-dart-vertical.svg') left top / 7px 44px repeat-y,
+    url('assets/frames/egg-dart-vertical.svg') right top / 7px 44px repeat-y;
+  box-shadow:
+    0 0 0 1px #f0d59c80,
+    0 0 0 3px #392817b3,
+    inset 0 0 0 7px #2b1a0b55,
+    inset 0 0 0 8px #e3c59096,
+    inset 0 0 0 9px #1b100ebf;
+}
+.framed-draft .picture-frame::after{
+  inset:-5px;
+  z-index:3;
+  background:
+    url('assets/frames/acanthus-tl.svg') left top / var(--corner-size) var(--corner-size) no-repeat,
+    url('assets/frames/acanthus-tr.svg') right top / var(--corner-size) var(--corner-size) no-repeat,
+    url('assets/frames/acanthus-bl.svg') left bottom / var(--corner-size) var(--corner-size) no-repeat,
+    url('assets/frames/acanthus-br.svg') right bottom / var(--corner-size) var(--corner-size) no-repeat;
+}
+.framed-draft .picture-frame>img{
+  position:relative;
+  z-index:0;
+  outline:1px solid #150e0b;
+  box-shadow:0 0 0 1px #d5ad65,0 0 0 3px #281b13,0 0 0 4px #e0bc7d80;
+}
+.framed-draft .artist:nth-child(3n + 2) .picture-frame{
+  --frame-body:#422719;
+  --frame-light:#ac8553;
+  --frame-dark:#170e0b;
+  border-color:#9b784c #23150f #150d0a #725335;
+  background:
+    linear-gradient(135deg,#ce9b664d 0%,transparent 32%,#100a09ed 100%),
+    repeating-linear-gradient(96deg,#13090408 0 1px,#e2ac6b18 1px 2px,#13090414 2px 5px),
+    var(--frame-body);
+}
+.framed-draft .artist:nth-child(3n) .picture-frame{
+  --frame-body:#6e6045;
+  --frame-light:#e2d0a1;
+  --frame-dark:#353326;
+  border-color:#d3c295 #464133 #252319 #9b8961;
+}
+.framed-draft .artist:nth-child(3n) .picture-frame::after{filter:saturate(.58) brightness(.93)}
+.framed-draft .portrait-frame{--frame-width:clamp(14px,1vw,20px)}
+.framed-draft .artist-detail.picture-frame{width:100%;text-align:inherit}
+.framed-draft .artist-detail.picture-frame:hover,
+.framed-draft .artist-detail.picture-frame:focus-visible{
+  box-shadow:0 1px 0 #fff8,0 3px 4px #22180c75,2px 12px 18px #36271759,3px 21px 28px -12px #291b15bd,inset 1px 1px 1px #f7e8ba,inset -2px -2px 2px #22160e;
+}
+.framed-draft .artist-detail.picture-frame:focus-visible{outline-offset:9px}
+.framed-draft .artist-work{margin-top:23px}
+.framed-draft .artist h3{margin-bottom:24px}
+.framed-draft .artist-grid{column-gap:clamp(24px,2.4vw,46px);row-gap:78px}
+.framed-draft .artist-portfolio{margin-top:8px}
+.framed-draft .visit{
+  --visit-frame-inset:24px;
+  --visit-frame-width:clamp(20px,2vw,34px);
+  padding:100px max(var(--gutter),76px);
+}
+.framed-draft .visit-frame{
+  --frame-width:var(--visit-frame-width);
+  --corner-size:clamp(82px,9vw,144px);
+  position:absolute;
+  inset:var(--visit-frame-inset);
+  z-index:-2;
+  width:auto;
+  height:auto;
+}
+.framed-draft .visit-frame>.visit-photo{
+  position:absolute;
+  inset:var(--frame-width);
+  width:calc(100% - var(--frame-width) * 2);
+  height:calc(100% - var(--frame-width) * 2);
+  z-index:0;
+}
+.framed-draft .visit:after{
+  inset:calc(var(--visit-frame-inset) + var(--visit-frame-width) + 2px);
+}
+.framed-draft .modal-frame{
+  --frame-width:20px;
+  --corner-size:78px;
+  flex:0 1 auto;
+  min-height:0;
+  max-width:100%;
+  display:flex;
+  justify-content:center;
+}
+.framed-draft .modal-frame>img{
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:calc(100svh - 194px);
+  object-fit:contain;
+}
+@media(max-width:1100px){
+  .framed-draft .artist-grid{gap:58px 28px}
+  .framed-draft .picture-frame{--frame-width:19px;--corner-size:70px}
+  .framed-draft .portrait-frame{--frame-width:17px}
+  .framed-draft .visit-frame{--frame-width:var(--visit-frame-width);--corner-size:110px}
+}
+@media(max-width:700px){
+  .framed-draft .artist-grid{gap:44px 24px}
+  .framed-draft .picture-frame{--frame-width:15px;--corner-size:58px}
+  .framed-draft .artist-work{margin-top:20px}
+  .framed-draft .artist h3{margin-bottom:20px}
+  .framed-draft .visit{--visit-frame-inset:12px;--visit-frame-width:18px;padding:76px 45px}
+  .framed-draft .visit-frame{--frame-width:var(--visit-frame-width);--corner-size:86px}
+  .framed-draft .modal-frame{--frame-width:15px;--corner-size:60px}
+  .framed-draft .modal-frame>img{max-height:calc(100svh - 186px)}
+}
+@media(max-width:520px){
+  /* A real moulding needs physical width. Keep the tattoos generous on phones. */
+  .framed-draft .artist-grid{grid-template-columns:minmax(0,1fr);row-gap:48px}
+  .framed-draft .picture-frame{--frame-width:20px;--corner-size:78px}
+  .framed-draft .artist h3{min-height:0;font-size:24px;margin-bottom:22px}
+  .framed-draft .portrait-frame{--frame-width:17px;--corner-size:68px}
+  .framed-draft .artist-work{margin-top:24px}
+  .framed-draft .artist-portfolio{min-height:54px}
+  .framed-draft .visit-frame{--frame-width:var(--visit-frame-width);--corner-size:86px}
+  .framed-draft .modal-frame{--frame-width:14px;--corner-size:58px}
+}
+
