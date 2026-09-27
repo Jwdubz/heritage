@@ -1,5 +1,6 @@
 @font-face{font-family:Barlow;src:url('assets/barlow-400.ttf') format('truetype');font-weight:400;font-display:swap}
 @font-face{font-family:Barlow;src:url('assets/barlow-600.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:Barlow;src:url('assets/barlow-700.ttf') format('truetype');font-weight:700;font-display:swap}
 @font-face{font-family:'Barlow Condensed';src:url('assets/barlow-condensed-700.ttf') format('truetype');font-weight:700;font-display:swap}
 :root{--ink:#171716;--paper:#e9e3d6;--red:#9e3024;--gutter:clamp(24px,3.4vw,72px);color-scheme:dark}
 *{box-sizing:border-box}
@@ -35,7 +36,7 @@ nav a:not(.booking-link):hover{border-color:var(--paper)}
 .work a:focus-visible,.work button:focus-visible{outline-color:var(--ink)}
 .work-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:60px;margin-bottom:66px}
 .work-intro h2{font-size:clamp(64px,7.7vw,150px);line-height:.95;max-width:65%}
-.work-intro>div{max-width:310px;font-size:19px;line-height:1.6;padding-bottom:7px}
+.work-intro>div{max-width:310px;font-size:19px;font-weight:700;line-height:1.6;padding-bottom:7px}
 .work-intro p+p{margin-top:20px}
 .artist-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:clamp(18px,1.8vw,34px);row-gap:70px}
 .artist{min-width:0}
@@ -48,7 +49,7 @@ nav a:not(.booking-link):hover{border-color:var(--paper)}
 .artist-portfolio>.icon-arrow{width:21px;height:21px;transition:transform .2s}
 .artist-portfolio:hover>.icon-arrow{transform:translate(3px,-3px)}
 .artist-portfolio:hover{border-color:var(--ink)}
-.work-outro{margin-top:70px;display:flex;justify-content:space-between;gap:30px;align-items:center;font-size:18px}
+.work-outro{margin-top:70px;display:flex;justify-content:space-between;gap:30px;align-items:center;font-size:18px;font-weight:700}
 .work-outro a{border-bottom:1px solid var(--ink);padding:8px 0}
 .work-outro a .icon-arrow{margin-left:35px}
 .visit{min-height:930px;height:110svh;position:relative;display:flex;align-items:flex-end;padding:90px var(--gutter);overflow:hidden;isolation:isolate}
