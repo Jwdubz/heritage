@@ -143,6 +143,7 @@
   .framed-draft .artist-work{margin-top:20px}
   .framed-draft .artist h3{margin-bottom:20px}
   .framed-draft .visit{--visit-frame-inset:12px;--visit-frame-width:18px;padding:76px 45px}
+  .framed-draft .visit .primary-action{gap:24px}
   .framed-draft .visit-frame{--frame-width:var(--visit-frame-width);--corner-size:86px}
   .framed-draft .modal-frame{--frame-width:15px;--corner-size:60px}
   .framed-draft .modal-frame>img{max-height:calc(100svh - 186px)}
