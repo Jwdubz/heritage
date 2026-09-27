@@ -2,6 +2,7 @@
 @font-face{font-family:Barlow;src:url('assets/barlow-600.ttf') format('truetype');font-weight:600;font-display:swap}
 @font-face{font-family:Barlow;src:url('assets/barlow-700.ttf') format('truetype');font-weight:700;font-display:swap}
 @font-face{font-family:'Barlow Condensed';src:url('assets/barlow-condensed-700.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'IM Fell English SC';src:url('assets/im-fell-english-sc-400.woff2') format('woff2');font-style:normal;font-weight:400;font-display:swap}
 :root{--ink:#171716;--paper:#e9e3d6;--red:#9e3024;--gutter:clamp(24px,3.4vw,72px);color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:auto;scroll-padding-top:105px;scroll-padding-bottom:110px}
@@ -17,6 +18,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #fff;outline-offset:6px}
 button{border:0}
 img{max-width:100%;display:block}
 p{margin:0}
+.film-title p,.work-intro>div,.work-outro,.visit-copy>p,.visit-details,.award-copy>span,.award-source,footer>p,.art-dialog>p{font-family:'IM Fell English SC',Georgia,serif}
 h1,h2{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:700;line-height:.87;letter-spacing:-.025em;margin:0}
 .skip-link{position:fixed;top:12px;left:12px;padding:12px 20px;background:var(--paper);color:var(--ink);z-index:100;transform:translateY(-150%)}
 .skip-link:focus{transform:none}
