@@ -114,15 +114,14 @@ footer a{display:inline-flex;align-items:center;gap:8px;text-decoration:underlin
 }
 
 /* The award leads into the artists without covering the opening film. */
-.award{background:transparent;color:var(--ink);padding:32px var(--gutter)}
-.award a:focus-visible{outline-color:var(--ink)}
+.award{background:var(--ink);color:var(--paper);padding:32px var(--gutter)}
 .award-link{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:30px;max-width:1440px;margin:auto}
-.award-year{font:700 64px/1 'Barlow Condensed','Arial Narrow',sans-serif;color:#665b4e}
+.award-year{font:700 64px/1 'Barlow Condensed','Arial Narrow',sans-serif;color:#bcb7ad}
 .award-copy{display:flex;flex-direction:column;gap:6px}
 .award-copy strong{font:700 clamp(30px,3vw,44px)/1.05 'Barlow Condensed','Arial Narrow',sans-serif}
 .award-copy>span{font-size:16px}
-.award-source{display:inline-flex;align-items:center;gap:16px;font-size:16px;padding:10px 0;border-bottom:1px solid #17171675}
-.award-link:hover .award-source{border-color:var(--ink)}
+.award-source{display:inline-flex;align-items:center;gap:16px;font-size:16px;padding:10px 0;border-bottom:1px solid #e9e3d675}
+.award-link:hover .award-source{border-color:var(--paper)}
 .floating-booking{position:fixed;z-index:40;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:inline-flex;align-items:center;justify-content:center;gap:24px;min-height:56px;max-width:calc(100vw - 40px);padding:14px 28px;border:1px solid #17171645;border-radius:999px;background:var(--paper);color:var(--ink);font-size:18px;font-weight:600;white-space:nowrap;box-shadow:0 4px 20px #0003;transition:background .2s,color .2s}
 .floating-booking:hover{background:var(--ink);color:var(--paper);border-color:var(--paper)}
 .floating-booking:focus-visible{outline-color:var(--red);outline-offset:4px}
