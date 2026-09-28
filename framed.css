@@ -1,28 +1,28 @@
 /* Separate, reversible framed-gallery art direction. The approved base remains unchanged.
-   Ornament is original decorative vector work; no source photograph is recolored or edited. */
+   Antique silver is applied to mouldings and decorative layers only, never photographs. */
 .framed-draft .picture-frame{
   --frame-width:clamp(14px,1.15vw,23px);
   --corner-size:clamp(48px,4.7vw,76px);
-  --frame-body:#967043;
-  --frame-light:#e5c688;
-  --frame-dark:#372818;
+  --frame-body:#9b9fa2;
+  --frame-light:#eceeed;
+  --frame-dark:#34393d;
   position:relative;
   display:block;
   padding:var(--frame-width);
   border:2px solid;
-  border-color:#e0c393 #49321c #342319 #c39b61;
+  border-color:#e5e7e6 #62686c #3d4247 #bdc3c7;
   border-radius:1px;
   background:
-    linear-gradient(135deg,#f1dbaa60 0%,transparent 32%,#24170ddd 100%),
-    repeating-linear-gradient(90deg,transparent 0 2px,#130a071c 2px 3px,transparent 3px 5px),
+    linear-gradient(135deg,#f1f4f680 0%,transparent 32%,#20252add 100%),
+    repeating-linear-gradient(90deg,transparent 0 2px,#151b201c 2px 3px,transparent 3px 5px),
     var(--frame-body);
   box-shadow:
     0 1px 0 #fff8,
-    0 3px 4px #22180c75,
-    1px 9px 13px #36271740,
-    3px 19px 24px -12px #291b15a6,
-    inset 1px 1px 1px #f7e8ba,
-    inset -2px -2px 2px #22160e;
+    0 3px 4px #181d2275,
+    1px 9px 13px #24292e40,
+    3px 19px 24px -12px #1b2025a6,
+    inset 1px 1px 1px #f5f7f8,
+    inset -2px -2px 2px #20252a;
   isolation:isolate;
 }
 .framed-draft .picture-frame::before,
@@ -30,6 +30,7 @@
   content:"";
   position:absolute;
   pointer-events:none;
+  filter:grayscale(1) brightness(1.22);
 }
 .framed-draft .picture-frame::before{
   inset:5px;
@@ -42,11 +43,11 @@
     url('assets/frames/egg-dart-vertical.svg') left top / 7px 44px repeat-y,
     url('assets/frames/egg-dart-vertical.svg') right top / 7px 44px repeat-y;
   box-shadow:
-    0 0 0 1px #f0d59c80,
-    0 0 0 3px #392817b3,
-    inset 0 0 0 7px #2b1a0b55,
-    inset 0 0 0 8px #e3c59096,
-    inset 0 0 0 9px #1b100ebf;
+    0 0 0 1px #eff2f480,
+    0 0 0 3px #30363bb3,
+    inset 0 0 0 7px #20262b55,
+    inset 0 0 0 8px #e4e8eb96,
+    inset 0 0 0 9px #161b20bf;
 }
 .framed-draft .picture-frame::after{
   inset:-5px;
@@ -60,35 +61,18 @@
 .framed-draft .picture-frame>img{
   position:relative;
   z-index:0;
-  outline:1px solid #150e0b;
-  box-shadow:0 0 0 1px #d5ad65,0 0 0 3px #281b13,0 0 0 4px #e0bc7d80;
+  outline:1px solid #12171b;
+  box-shadow:0 0 0 1px #c4cacf,0 0 0 3px #22282d,0 0 0 4px #d9dfe380;
 }
-.framed-draft .artist:nth-child(3n + 2) .picture-frame{
-  --frame-body:#422719;
-  --frame-light:#ac8553;
-  --frame-dark:#170e0b;
-  border-color:#9b784c #23150f #150d0a #725335;
-  background:
-    linear-gradient(135deg,#ce9b664d 0%,transparent 32%,#100a09ed 100%),
-    repeating-linear-gradient(96deg,#13090408 0 1px,#e2ac6b18 1px 2px,#13090414 2px 5px),
-    var(--frame-body);
-}
-.framed-draft .artist:nth-child(3n) .picture-frame{
-  --frame-body:#6e6045;
-  --frame-light:#e2d0a1;
-  --frame-dark:#353326;
-  border-color:#d3c295 #464133 #252319 #9b8961;
-}
-.framed-draft .artist:nth-child(3n) .picture-frame::after{filter:saturate(.58) brightness(.93)}
 .framed-draft .portrait-frame{--frame-width:clamp(14px,1vw,20px)}
 .framed-draft .artist-detail.picture-frame{width:100%;text-align:inherit}
 .framed-draft .artist-detail.picture-frame:hover,
 .framed-draft .artist-detail.picture-frame:focus-visible{
-  box-shadow:0 1px 0 #fff8,0 3px 4px #22180c75,2px 12px 18px #36271759,3px 21px 28px -12px #291b15bd,inset 1px 1px 1px #f7e8ba,inset -2px -2px 2px #22160e;
+  box-shadow:0 1px 0 #fff8,0 3px 4px #181d2275,2px 12px 18px #24292e59,3px 21px 28px -12px #1b2025bd,inset 1px 1px 1px #f5f7f8,inset -2px -2px 2px #20252a;
 }
 .framed-draft .artist-detail.picture-frame:focus-visible{outline-offset:9px}
 .framed-draft .artist-work{margin-top:23px}
-.framed-draft .artist h3{margin-bottom:24px}
+.framed-draft .artist h3{margin-bottom:24px;justify-content:center;text-align:center}
 .framed-draft .artist-grid{column-gap:clamp(24px,2.4vw,46px);row-gap:78px}
 .framed-draft .artist-portfolio{margin-top:8px}
 .framed-draft .visit{
